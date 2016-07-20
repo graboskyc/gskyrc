@@ -1,0 +1,37 @@
+# screen fixes
+autodetach on
+defutf8 on
+altscreen on
+defscrollback 10000
+startup_message off
+msgwait 3.0
+term xterm-256color
+nonblock on
+termcapinfo vt100 dl=5\E[M
+sorendition "+b Wb"
+
+# status bar
+hardstatus alwayslastline
+hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a "
+#hardstatus alwayslastline '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f %t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{G}%l %{W}%c %{g}]'
+
+# terminal fixes
+#termcapinfo xterm*|rxvt*|kterm*|Eterm* hs:ts=\E]0;:fs=\007:ds=\E]0;\007
+#termcapinfo xterm*|linux*|rxvt*|Eterm* OP
+#termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+
+# default windows
+# none
+
+# keybindings
+# F9 resize -1 line
+bindkey -k k9 resize -1
+# F10 resize +1 line
+bindkey -k k; resize +1
+# F7 Remove single split
+bindkey -k k7 remove
+# F8 Remove all splits
+bindkey -k k8 only
+# F5 & F6 previous and next
+bindkey -k k5 prev
+bindkey -k k6 next
