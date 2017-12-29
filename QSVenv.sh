@@ -29,6 +29,7 @@ echo
 
 echo "configuring shellfoundry"
 ${path}/${venvDir}/bin/shellfoundry config host 192.168.2.251
+${path}/${venvDir}/bin/shellfoundry config author graboskyc
 ${path}/${venvDir}/bin/shellfoundry config 
 
 echo 
