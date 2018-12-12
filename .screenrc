@@ -3,17 +3,20 @@ autodetach on
 defutf8 on
 altscreen on
 defscrollback 10000
-startup_message off
-msgwait 3.0
+startup_message off 
+msgwait 3.0 
 term xterm-256color
 nonblock on
 termcapinfo vt100 dl=5\E[M
-sorendition "+b Wb"
+sorendition "+b Wb" 
+vbell on
 
-# status bar
+# status bar 
+backtick 1 15 15 /Applications/cpu.sh
+backtick 2 15 15 python /Applications/memreport.py 
 hardstatus alwayslastline
-hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a "
-#hardstatus alwayslastline '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f %t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{G}%l %{W}%c %{g}]'
+hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H || %1` || %2`"
+caption always "%=%{..G}  %h %-024=%{+b} %C%a %D %d %M %Y%{= db}"
 
 # terminal fixes
 #termcapinfo xterm*|rxvt*|kterm*|Eterm* hs:ts=\E]0;:fs=\007:ds=\E]0;\007
@@ -21,7 +24,7 @@ hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a "
 #termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
 
 # default windows
-# none
+screen -t bash 1 bash 
 
 # keybindings
 # F9 resize -1 line
