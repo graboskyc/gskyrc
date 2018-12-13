@@ -12,12 +12,13 @@ sorendition "+b Wb"
 vbell on
 
 # status bar 
+# https://www.kilobitspersecond.com/2014/02/10/understanding-gnu-screens-hardstatus-strings/
 backtick 1 15 15 /Applications/cpu.sh
 backtick 2 15 15 /Applications/mem.sh
 backtick 3 1 1 /Applications/partition.sh
 hardstatus alwayslastline
-hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %3` %1` %3` %2`"
-caption always "%=%{..G}  %h %-024=%{+b} %C%a %D %d %M %Y%{= db}"
+hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..W} %H %3` %1` %3` %2`"
+caption always "%=%{..W}  %h %-024=%{+b} %C%a %D %d %M %Y%{= db}"
 
 # terminal fixes
 #termcapinfo xterm*|rxvt*|kterm*|Eterm* hs:ts=\E]0;:fs=\007:ds=\E]0;\007
@@ -25,7 +26,7 @@ caption always "%=%{..G}  %h %-024=%{+b} %C%a %D %d %M %Y%{= db}"
 #termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
 
 # default windows
-screen -t bash 1 bash 
+screen -t LocalBash 1 bash 
 
 # keybindings
 # F9 resize -1 line
