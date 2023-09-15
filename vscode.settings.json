@@ -1,0 +1,11 @@
+{
+    "workbench.colorTheme": "Visual Studio Dark",
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "*.razor": "${capture}.razor.*",
+        "*.cshtml": "${capture}.cshtml.*",
+        "appsettings.json": "appsettings.*.json"
+    },
+    "explorer.fileNesting.expand": false,
+    "dotnet.preferRuntimeFromSDK": true
+}
