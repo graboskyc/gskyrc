@@ -1,0 +1,26 @@
+! Aug 10, 2026 https://www.reddit.com
+www.reddit.com###desktop-dynamic-upsell-dialog
+
+! Reddit Mouseover popups
+www.reddit.com##[id$="hover-id"]
+
+! Reddit Rpan broadcasts
+www.reddit.com##.scrollerItem:has(div>a[href="/rpan/"]>p)
+www.reddit.com##.scrollerItem:has-text(Top broadcast right now)
+
+! Reddit General Stuff https://www.reddit.com
+www.reddit.com##._12Ewyh01Y1cMPB3Ri_F1C4
+www.reddit.com##._25n1vjWrHyVcdDkuLwR2Y-
+www.reddit.com###t3_ptrz1k > ._1poyrkZ7g36PawDueRza-J > ._2XDITKxlj4y3M99thqyCsO > ._1Y6dfr4zLlrygH-FLmr8x- > .Ywkt6EDfNWINeTr9lP29H > .UEPNkU0rd1-nvbkOcBatc._10BQ7pjWbeYP63SAPNS8Ts._2iuoyPiKHN3kfOoeIQalDT._2r87gmhJ9n0MsylKHkgDcp
+www.reddit.com##.UEPNkU0rd1-nvbkOcBatc._10BQ7pjWbeYP63SAPNS8Ts._2iuoyPiKHN3kfOoeIQalDT._2r87gmhJ9n0MsylKHkgDcp
+www.reddit.com##.YfUlQeQY0xbmCv-So3isP
+www.reddit.com##._1cubpGNEaCAVnpJl1KBPcO.cmR5BF4NpBUm3DBMZCmJS
+
+! Popup removal rules
+www.reddit.com###app-upsell-blocking-bottom-sheet-direct
+
+! Prevent scroll locking scripts
+www.reddit.com##+js(rc, rpl-scroll-lock|scroll-is-blocked, html, stay)
+www.reddit.com##+js(rc, rpl-scroll-lock|scroll-is-blocked, body, stay)
+www.reddit.com##+js(aeld, touchmove, preventDefault)
+
